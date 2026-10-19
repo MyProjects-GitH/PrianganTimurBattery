@@ -1,0 +1,63 @@
+@media (max-width: 900px) {
+    .service-grid-modern {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-layout,
+    .faq-layout,
+    .coverage-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .services-section,
+    .process-section,
+    .faq-section {
+        padding: 60px 0;
+    }
+
+    .service-grid-modern {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card-modern {
+        min-height: 0;
+    }
+
+    .service-symbol {
+        margin: 24px 0 16px;
+    }
+
+    .service-card-modern p {
+        min-height: 0;
+    }
+
+    .coverage-section {
+        padding: 60px 0;
+    }
+
+    .coverage-inner {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .coverage-section h2 {
+        margin: 0 auto;
+    }
+
+    .coverage-tags {
+        justify-content: center;
+    }
+
+    .contact-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contact-cta-inner .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,47 @@
+@media (max-width: 900px) {
+
+    .contact-grid,
+    .map-wrap,
+    .area-box {
+        grid-template-columns: 1fr;
+    }
+
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-hero {
+        min-height: 260px;
+    }
+
+    .contact-section,
+    .map-section,
+    .service-area {
+        padding: 60px 0;
+    }
+
+    .form-card,
+    .whatsapp-box {
+        padding: 22px 18px;
+    }
+
+    .area-box {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .area-box ul {
+        justify-content: center;
+    }
+
+    .whatsapp-box {
+        text-align: center;
+    }
+
+    .info-item {
+        grid-template-columns: 48px 1fr;
+        padding: 16px;
+    }
+}

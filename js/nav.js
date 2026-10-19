@@ -6,6 +6,7 @@ if (menuToggle && navigation) {
         menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.setAttribute("aria-label", isOpen ? "Tutup menu" : "Buka menu");
         navigation.classList.toggle("is-open", isOpen);
+        document.body.classList.toggle("menu-open", isOpen);
     };
 
     menuToggle.addEventListener("click", () => {

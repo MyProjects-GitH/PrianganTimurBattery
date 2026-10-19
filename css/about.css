@@ -3,7 +3,7 @@
     min-height: 320px;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url('../img/hero.jpeg') center/cover no-repeat;
+    background: linear-gradient(115deg, #0b1220, #172235);
 }
 
 .about-page-hero {
@@ -14,7 +14,7 @@
     display: inline-block;
     margin-bottom: 16px;
     padding: 8px 14px;
-    border-radius: 999px;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #ffffff;
@@ -52,7 +52,7 @@
     width: min(480px, 100%);
     height: 480px;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 0 18px 40px rgba(29, 78, 216, 0.18);
 }
 
@@ -80,7 +80,7 @@
 .about-highlights div {
     padding: 18px 16px;
     border: 1px solid #e2e7ef;
-    border-radius: 16px;
+    border-radius: 10px;
     background: #ffffff;
     box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
 }
@@ -141,7 +141,7 @@
     min-height: 250px;
     padding: 26px;
     border: 1px solid #e2e7ef;
-    border-radius: 22px;
+    border-radius: 10px;
     background: #ffffff;
     box-shadow: 0 14px 32px rgba(15, 23, 42, 0.05);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -231,7 +231,7 @@
 .about-scope-tags span {
     padding: 12px 16px;
     border: 1px solid #dfe5ee;
-    border-radius: 999px;
+    border-radius: 10px;
     color: #657084;
     font-size: 0.82rem;
 }
@@ -252,53 +252,4 @@
 .branch-showcase {
     padding: 100px 0 80px;
     background: #ffffff;
-}
-
-@media (max-width: 900px) {
-
-    .story-grid,
-    .about-scope-inner {
-        grid-template-columns: 1fr;
-        gap: 36px;
-    }
-
-    .about-highlights,
-    .about-values-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .story-image {
-        height: min(480px, 70vw);
-    }
-}
-
-@media (max-width: 560px) {
-
-    .story-section,
-    .about-scope-section {
-        padding: 60px 0;
-    }
-
-    .about-values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-highlights {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 8px;
-        text-align: center;
-    }
-
-    .about-highlights div {
-        padding: 14px 6px;
-    }
-
-    .about-cta-inner {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .about-cta-inner .btn {
-        width: 100%;
-    }
 }

@@ -19,7 +19,7 @@
     margin-bottom: 16px;
     padding: 8px 14px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 999px;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.12);
     color: #ffffff;
     font-size: 0.8rem;
@@ -60,7 +60,7 @@
 .section-kicker {
     padding: 8px 14px;
     border: 1px solid rgba(29, 78, 216, 0.1);
-    border-radius: 999px;
+    border-radius: 10px;
     background: #eef4ff;
 }
 
@@ -89,7 +89,7 @@
 .meta-divider {
     width: 4px;
     height: 4px;
-    border-radius: 50%;
+    border-radius: 10px;
     background: #dc2626;
 }
 
@@ -102,7 +102,7 @@
     gap: 8px;
     margin: 0 auto 42px;
     padding: 8px;
-    border-radius: 18px;
+    border-radius: 10px;
     background: #ffffff;
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
 }
@@ -110,7 +110,7 @@
 .filter-btn {
     padding: 10px 16px;
     border: 0;
-    border-radius: 11px;
+    border-radius: 10px;
     background: transparent;
     color: #657084;
     font-size: 0.78rem;
@@ -141,7 +141,7 @@
     min-width: 0;
     overflow: hidden;
     border: 1px solid #e2e7ef;
-    border-radius: 20px;
+    border-radius: 10px;
     background: #ffffff;
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -190,7 +190,7 @@
     display: inline-block;
     padding: 8px 12px;
     border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 999px;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.86);
     color: #1d4ed8;
     font-size: 0.66rem;
@@ -257,35 +257,4 @@
     margin-top: 14px;
     color: #dce7ff;
     line-height: 1.75;
-}
-
-@media (max-width: 900px) {
-    .brand-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 560px) {
-
-    .brand-section,
-    .catalog-help-section {
-        padding: 60px 0;
-    }
-
-    .brand-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .catalog-help-inner {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .catalog-help-inner .btn {
-        width: 100%;
-    }
-
-    .filter-wrap {
-        justify-content: center;
-    }
 }
