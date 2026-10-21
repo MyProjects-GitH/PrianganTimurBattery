@@ -1,54 +1,3 @@
-@media (max-width: 900px) {
-    .navbar {
-        margin-bottom: -116px;
-    }
-
-    .hero {
-        min-height: 50vh;
-    }
-
-    .nav-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 14px;
-        padding: 18px 0;
-    }
-
-    .menu {
-        width: 100%;
-        gap: 10px 16px;
-        flex-wrap: wrap;
-    }
-
-    .hero-intro-inner {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .coverage-inner,
-    .faq-inner {
-        grid-template-columns: 1fr;
-    }
-
-    .product-grid,
-    .branch-grid,
-    .advantage-grid,
-    .footer-inner {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .service-grid,
-    .process-grid,
-    .testimonial-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .coverage-inner,
-    .faq-inner {
-        gap: 32px;
-    }
-}
-
 @media (max-width: 560px) {
     .container {
         width: min(100% - 32px, 1100px);
@@ -66,23 +15,52 @@
         min-height: 45vh;
     }
 
+    .hero-intro-inner {
+        margin-top: -45%;
+    }
+
     .hero-content h1 {
-        font-size: clamp(2.2rem, 10vw, 3rem);
+        font-size: 1.4rem;
+        padding: 0 20px;
     }
 
     .hero-content p {
-        text-align: left;
+        font-size: 0.8rem;
+        padding: 0 30px;
     }
 
-    .hero-actions,
-    .product-action {
-        align-items: stretch;
+    .hero-intro-inner {
+        align-items: flex-start;
         flex-direction: column;
     }
 
-    .hero-actions .btn,
+    .hero-actions {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .hero-actions .btn {
+        flex: 1 1 0;
+        min-width: 0;
+        gap: 6px;
+        padding: 12px 8px;
+        font-size: 0.78rem;
+    }
+
+    .product-action {
+        flex-direction: row;
+        gap: 8px;
+    }
+
     .product-action .btn {
-        width: 100%;
+        flex: 1 1 0;
+        min-width: 0;
+        gap: 6px;
+        padding: 12px 8px;
+        font-size: 0.78rem;
     }
 
     .hero-stats {
@@ -92,22 +70,40 @@
         text-align: center;
     }
 
+    .hero-stats strong {
+        font-size: 1.3rem;
+    }
+
+    .hero-stats span {
+        font-size: 0.8rem;
+    }
+
     .products,
     .services,
     .advantages,
     .process,
     .testimonials,
     .faq {
-        padding: 60px 0;
+        padding: 20px 0;
     }
 
     .branch-grid,
-    .advantage-grid,
-    .service-grid,
-    .process-grid,
-    .testimonial-grid,
-    .footer-inner {
+    .testimonial-grid {
         grid-template-columns: 1fr;
+    }
+
+    .coverage-inner,
+    .faq-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .products .section-heading p {
+        font-size: 0.8rem;
     }
 
     .product-grid {
@@ -127,23 +123,7 @@
         scroll-snap-align: start;
     }
 
-    .branch-showcase .branch-grid {
-        grid-auto-columns: 82%;
-        grid-auto-flow: column;
-        grid-template-columns: none;
-        gap: 16px;
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
-        padding-bottom: 12px;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: thin;
-    }
-
-    .branch-showcase .branch-card {
-        min-width: 0;
-        scroll-snap-align: start;
-    }
-
+    .branch-showcase .branch-grid,
     .testimonials .testimonial-grid {
         grid-auto-columns: 82%;
         grid-auto-flow: column;
@@ -156,15 +136,104 @@
         scrollbar-width: thin;
     }
 
+    .branch-showcase .branch-card,
     .testimonials .testimonial-card {
         min-width: 0;
         scroll-snap-align: start;
     }
 
+    .advantages p {
+        font-size: 0.8rem;
+    }
+
     .advantage-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+        grid-auto-columns: 82%;
+        grid-auto-flow: column;
+        grid-template-columns: none;
+        gap: 16px;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        padding-bottom: 12px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+    }
+
+    .advantages .section-kicker {
+        margin-top: 50px;
+    }
+
+    .advantage-card {
+        min-width: 0;
+        scroll-snap-align: start;
         text-align: center;
+    }
+
+    .services .section-kicker {
+        margin-top: 50px;
+    }
+
+    .services h2 {
+        font-size: 1.5rem;
+        margin-bottom: -20px;
+    }
+
+    .service-card {
+        text-align: center;
+    }
+
+    .service-grid {
+        grid-auto-columns: 82%;
+        grid-auto-flow: column;
+        grid-template-columns: none;
+        gap: 16px;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        padding-bottom: 12px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+    }
+
+    .service-card {
+        min-width: 0;
+        scroll-snap-align: start;
+    }
+
+    .service-card p {
+        font-size: 0.8rem;
+    }
+
+    .process .section-kicker {
+        margin-top: 50px;
+    }
+
+    .process-grid {
+        grid-auto-columns: 82%;
+        grid-auto-flow: column;
+        grid-template-columns: none;
+        gap: 16px;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        padding-bottom: 12px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+    }
+
+    .process-card {
+        min-width: 0;
+        scroll-snap-align: start;
+        text-align: center;
+    }
+
+    .process-card p {
+        font-size: 0.8rem;
+    }
+
+    .branch-showcase .section-heading {
+        margin-top: 50px;
+    }
+
+    .testimonial-grid p {
+        font-size: 0.8rem;
     }
 
     .footer-inner {
@@ -179,6 +248,13 @@
 
     .footer-brand {
         margin: 0;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-contact li,
+    .footer-bottom p {
+        font-size: 0.8rem;
     }
 
     .footer-links li,
@@ -211,99 +287,5 @@
 
     .home-cta-inner .btn {
         width: 100%;
-    }
-}
-
-@media (max-width: 760px) {
-    .navbar {
-        margin-bottom: -108px;
-    }
-
-    .nav-inner {
-        position: relative;
-        align-items: center;
-        flex-direction: row;
-        gap: 12px;
-        padding: 14px 0;
-    }
-
-    .logo {
-        min-width: 0;
-    }
-
-    .logo a {
-        font-size: 0.95rem;
-    }
-
-    .menu-toggle {
-        display: flex;
-        flex: 0 0 44px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        width: 44px;
-        height: 44px;
-        margin-left: auto;
-        padding: 0;
-        border: 1px solid #dbe3ee;
-        border-radius: 10px;
-        background: #ffffff;
-        cursor: pointer;
-    }
-
-    .menu-toggle span {
-        width: 20px;
-        height: 2px;
-        border-radius: 10px;
-        background: #1f2937;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .menu-toggle[aria-expanded="true"] span:first-child {
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    .menu-toggle[aria-expanded="true"] span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle[aria-expanded="true"] span:last-child {
-        transform: translateY(-7px) rotate(-45deg);
-    }
-
-    .menu {
-        position: absolute;
-        top: calc(100% - 2px);
-        right: 0;
-        left: 0;
-        z-index: 10;
-        display: none;
-        align-items: stretch;
-        flex-direction: column;
-        gap: 4px;
-        padding: 10px;
-        border: 1px solid #e5e7eb;
-        border-radius: 10px;
-        background: #ffffff;
-        box-shadow: 0 14px 24px rgba(15, 23, 42, 0.12);
-    }
-
-    .menu.is-open {
-        display: flex;
-    }
-
-    .menu a,
-    .menu a.active {
-        min-width: 0;
-        min-height: 52px;
-        width: 100%;
-        padding: 0;
-        border-radius: 10px;
-        transform: none;
-    }
-
-    .menu a.active::after {
-        display: none;
     }
 }

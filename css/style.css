@@ -132,7 +132,7 @@ body {
 }
 
 .hero-content h1 {
-    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-size: clamp(2.2rem, 10vw, 3rem);
     line-height: 1.1;
     color: #111827;
     margin-bottom: 18px;
@@ -445,7 +445,7 @@ body {
 }
 
 .branch-actions {
-    display: grid;
+    display: flex;
     gap: 8px;
 }
 
@@ -454,8 +454,10 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     gap: 8px;
-    width: 100%;
+    flex: 1 1 0;
+    min-width: 0;
     padding: 8px 12px;
     border-radius: 10px;
     border: 1px solid #dbe3ee;
@@ -469,17 +471,41 @@ body {
 
 .branch-maps {
     background: #eff6ff;
+    font-size: 0;
+}
+
+.branch-maps::before {
+    width: 18px;
+    height: 18px;
+    background-color: currentColor;
+    content: "";
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.branch-maps::after,
+.branch-whatsapp::after {
+    font-size: 0.62rem;
+    line-height: 1.2;
+}
+
+.branch-maps::after {
+    content: "Google Maps";
 }
 
 .branch-whatsapp {
     background: rgba(37, 211, 102, 0.9);
     border-color: rgba(37, 211, 102, 0.7);
     color: #ffffff;
+    font-size: 0;
+}
+
+.branch-whatsapp::after {
+    content: "WhatsApp";
 }
 
 .branch-whatsapp svg {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     fill: currentColor;
 }
 
@@ -834,12 +860,4 @@ body {
 
 .menu-toggle {
     display: none;
-}
-
-h1 {
-    font-size: clamp(2.5rem, 5vw, 3rem) !important;
-}
-
-p {
-    font-size: 0.9rem !important;
 }

@@ -1,35 +1,48 @@
-@media (max-width: 900px) {
-
-    .story-grid,
-    .about-scope-inner {
-        grid-template-columns: 1fr;
-        gap: 36px;
-    }
-
-    .about-highlights,
-    .about-values-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .story-image {
-        height: min(480px, 70vw);
-    }
-}
-
 @media (max-width: 560px) {
 
     .story-section,
     .about-scope-section {
-        padding: 60px 0;
+        padding: 48px 0;
     }
 
-    .about-values-grid {
+    .story-section .story-image-wrap {
+        display: none;
+    }
+
+    .story-content {
+        margin-top: 80px;
+    }
+
+    .story-grid {
         grid-template-columns: 1fr;
+        gap: 28px;
+        align-items: start;
+    }
+
+    .about-scope-inner {
+        gap: 28px;
+    }
+
+    .story-image {
+        width: 100%;
+        height: min(360px, 85vw);
+    }
+
+    .story-content h2,
+    .about-section-intro h2,
+    .about-scope-section h2,
+    .about-cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .story-content p {
+        font-size: 0.8rem;
     }
 
     .about-highlights {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 8px;
+        margin-top: 20px;
         text-align: center;
     }
 
@@ -37,12 +50,138 @@
         padding: 14px 6px;
     }
 
+    .about-highlights strong {
+        font-size: 1.15rem;
+    }
+
+    .about-highlights span {
+        font-size: 0.65rem;
+    }
+
+    .about-values-section {
+        padding: 24px 0;
+    }
+
+    .about-section-intro {
+        margin-bottom: 24px;
+    }
+
+    .about-kicker {
+        font-size: 0.68rem;
+    }
+
+    .about-values-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .about-value-card {
+        min-height: 0;
+        padding: 22px;
+    }
+
+    .value-index {
+        margin-bottom: 28px;
+    }
+
+    .about-value-card p {
+        font-size: 0.82rem;
+    }
+
+    .about-scope-inner {
+        text-align: center;
+    }
+
+    .about-scope-tags {
+        gap: 8px;
+    }
+
+    .about-scope-tags span {
+        padding: 10px 12px;
+        font-size: 0.75rem;
+    }
+
+    .about-cta-section {
+        padding: 48px 0;
+    }
+
     .about-cta-inner {
-        align-items: flex-start;
+        align-items: stretch;
         flex-direction: column;
+        gap: 20px;
     }
 
     .about-cta-inner .btn {
         width: 100%;
     }
+
+    .branch-showcase {
+        padding: 48px 0;
+    }
+
+    .branch-showcase .section-heading {
+        margin-bottom: 20px;
+    }
+
+    .branch-showcase .section-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .branch-showcase .branch-grid {
+        grid-auto-columns: 82%;
+        grid-auto-flow: column;
+        grid-template-columns: none;
+        gap: 16px;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        padding-bottom: 12px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+    }
+
+    .branch-showcase .branch-card {
+        min-width: 0;
+        scroll-snap-align: start;
+    }
+
+    .footer-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 16px;
+        padding: 40px 0 24px;
+        text-align: left;
+    }
+
+    .footer-brand,
+    .footer-contact {
+        grid-column: 1 / -1;
+    }
+
+    .footer-brand {
+        margin: 0;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-contact li,
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+        margin-bottom: 12px;
+    }
+
+    .footer-links li,
+    .footer-contact li {
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-bottom {
+        padding: 16px 0;
+        text-align: center;
+    }
+
 }
