@@ -29,7 +29,7 @@
     }
 
     .logo a {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .menu-toggle {
@@ -115,11 +115,21 @@
     }
 
     .menu a span {
-        font-size: 0.7rem;
+        font-size: clamp(0.85rem, 3vw, 0.95rem);
     }
 
     .menu a.active::after {
         display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    html {
+        font-size: clamp(15px, calc(14px + 0.25vw), 16px);
+    }
+
+    .page-hero h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
     }
 }
 

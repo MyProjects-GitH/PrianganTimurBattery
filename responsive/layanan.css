@@ -1,63 +1,215 @@
-@media (max-width: 900px) {
-    .service-grid-modern {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .process-layout,
-    .faq-layout,
-    .coverage-inner {
-        grid-template-columns: 1fr;
-        gap: 36px;
-    }
-}
-
 @media (max-width: 560px) {
+    .services-section {
+        margin-top: 20%;
+    }
 
-    .services-section,
     .process-section,
     .faq-section {
-        padding: 60px 0;
+        padding: 48px 0;
+    }
+
+
+    .section-intro {
+        margin-bottom: 28px;
+    }
+
+    .section-intro h2,
+    .process-layout h2,
+    .faq-layout h2 {
+        font-size: clamp(1.6rem, 7vw, 2.1rem);
+    }
+
+    .section-intro > p:last-child,
+    .muted-copy {
+        font-size: 0.95rem;
     }
 
     .service-grid-modern {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
     }
 
     .service-card-modern {
         min-height: 0;
+        padding: 22px;
     }
 
     .service-symbol {
         margin: 24px 0 16px;
     }
 
+    .service-card-modern h3 {
+        font-size: 1.15rem;
+    }
+
     .service-card-modern p {
         min-height: 0;
+        font-size: 0.95rem;
+    }
+
+    .service-card-modern a {
+        min-height: 44px;
+        align-items: center;
+    }
+
+    .process-layout,
+    .faq-layout,
+    .coverage-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .eyebrow {
+        margin-bottom: 12px;
+        font-size: 0.75rem;
+    }
+
+    .process-item {
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 14px;
+        padding: 20px 0;
+    }
+
+    .process-item h3 {
+        font-size: 1rem;
+    }
+
+    .process-item p {
+        font-size: 0.9rem;
     }
 
     .coverage-section {
-        padding: 60px 0;
+        padding: 52px 0;
     }
 
     .coverage-inner {
-        justify-items: center;
         text-align: center;
     }
 
     .coverage-section h2 {
         margin: 0 auto;
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
     }
 
     .coverage-tags {
         justify-content: center;
+        gap: 8px;
+    }
+
+    .coverage-tags span {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+    }
+
+    .faq-layout {
+        gap: 20px;
+    }
+
+    .faq-list summary {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 0;
+        font-size: 0.95rem;
+    }
+
+    .faq-list summary::after {
+        flex: 0 0 auto;
+        margin-left: auto;
+    }
+
+    .faq-list details p {
+        padding: 0 0 18px;
+        font-size: 0.9rem;
+    }
+
+    .contact-cta {
+        padding: 52px 0;
     }
 
     .contact-cta-inner {
-        align-items: flex-start;
+        align-items: stretch;
         flex-direction: column;
+        gap: 24px;
+    }
+
+    .contact-cta h2 {
+        font-size: clamp(1.6rem, 7vw, 2.1rem);
     }
 
     .contact-cta-inner .btn {
         width: 100%;
+        min-height: 48px;
+    }
+
+    .footer-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 16px;
+        padding: 40px 0 24px;
+        text-align: left;
+    }
+
+    .footer-brand,
+    .footer-contact {
+        grid-column: 1 / -1;
+        min-width: 0;
+        max-width: none;
+    }
+
+    .footer-brand {
+        margin: 0;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-contact li,
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+
+    .footer-links,
+    .footer-contact {
+        min-width: 0;
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+        margin-bottom: 12px;
+    }
+
+    .footer-links li {
+        align-items: flex-start;
+        gap: 8px;
+        overflow-wrap: anywhere;
+        line-height: 1.6;
+    }
+
+    .footer-links .nav-icon {
+        flex: 0 0 18px;
+        margin-top: 0.15em;
+    }
+
+    .footer-links a {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-contact li {
+        display: grid;
+        grid-template-columns: 18px minmax(0, 1fr);
+        align-items: start;
+        gap: 8px;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        line-height: 1.6;
+    }
+
+    .footer-contact .contact-icon {
+        margin-top: 0.15em;
+    }
+
+    .footer-bottom {
+        padding: 16px 0;
+        text-align: center;
     }
 }

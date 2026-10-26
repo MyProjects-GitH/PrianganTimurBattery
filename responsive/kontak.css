@@ -1,30 +1,117 @@
-@media (max-width: 900px) {
+@media (max-width: 560px) {
+    .contact-section {
+        margin-top: 20%;
+    }
+    
+    .contact-section,
+    .map-section,
+    .service-area {
+        padding: 52px 0;
+    }
 
     .contact-grid,
     .map-wrap,
     .area-box {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
     }
 
-    .two-col {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 640px) {
-    .page-hero {
-        min-height: 260px;
+    .contact-info h2,
+    .map-copy h2,
+    .area-box h2 {
+        font-size: clamp(1.6rem, 7vw, 2.1rem);
     }
 
-    .contact-section,
-    .map-section,
-    .service-area {
-        padding: 60px 0;
+    .lead,
+    .map-copy p,
+    .area-box p {
+        font-size: 0.95rem;
+    }
+
+    .info-list {
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .info-item {
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .icon-box {
+        width: 46px;
+        height: 46px;
+    }
+
+    .info-item h3 {
+        font-size: 1rem;
+    }
+
+    .info-item a,
+    .info-item p {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        font-size: 0.9rem;
+    }
+
+    .contact-panel {
+        gap: 16px;
     }
 
     .form-card,
     .whatsapp-box {
         padding: 22px 18px;
+    }
+
+    .form-card h3,
+    .whatsapp-box h4 {
+        font-size: 1.2rem;
+    }
+
+    .field-row,
+    .two-col {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input,
+    select,
+    textarea {
+        min-height: 48px;
+        padding: 12px 14px;
+        font-size: 16px;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    .btn-primary {
+        margin-top: 12px;
+    }
+
+    form .btn,
+    .whatsapp-box .btn,
+    .map-copy .btn {
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .whatsapp-box {
+        text-align: center;
+    }
+
+    .map-wrap {
+        align-items: stretch;
+    }
+
+    .map-box iframe {
+        height: 300px;
     }
 
     .area-box {
@@ -34,14 +121,82 @@
 
     .area-box ul {
         justify-content: center;
+        gap: 8px;
     }
 
-    .whatsapp-box {
+    .area-box li {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    .footer-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 16px;
+        padding: 40px 0 24px;
+        text-align: left;
+    }
+
+    .footer-brand,
+    .footer-contact {
+        grid-column: 1 / -1;
+        min-width: 0;
+        max-width: none;
+    }
+
+    .footer-brand {
+        margin: 0;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-contact li,
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+
+    .footer-links,
+    .footer-contact {
+        min-width: 0;
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+        margin-bottom: 12px;
+    }
+
+    .footer-links li {
+        align-items: flex-start;
+        gap: 8px;
+        overflow-wrap: anywhere;
+        line-height: 1.6;
+    }
+
+    .footer-links .nav-icon {
+        flex: 0 0 18px;
+        margin-top: 0.15em;
+    }
+
+    .footer-links a {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-contact li {
+        display: grid;
+        grid-template-columns: 18px minmax(0, 1fr);
+        align-items: start;
+        gap: 8px;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        line-height: 1.6;
+    }
+
+    .footer-contact .contact-icon {
+        margin-top: 0.15em;
+    }
+
+    .footer-bottom {
+        padding: 16px 0;
         text-align: center;
-    }
-
-    .info-item {
-        grid-template-columns: 48px 1fr;
-        padding: 16px;
     }
 }

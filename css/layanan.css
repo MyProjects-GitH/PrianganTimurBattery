@@ -2,6 +2,11 @@ body {
     background: #f7f8fa;
 }
 
+
+.services-section {
+    margin-top: 5%;
+}
+
 .page-hero {
     position: relative;
     min-height: 320px;

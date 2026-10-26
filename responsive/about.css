@@ -28,15 +28,19 @@
         height: min(360px, 85vw);
     }
 
+    .story-content h2 {
+        text-align: center;
+    }
+
     .story-content h2,
     .about-section-intro h2,
     .about-scope-section h2,
     .about-cta-section h2 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .story-content p {
-        font-size: 0.8rem;
+        font-size: clamp(0.9rem, 2.8vw, 1rem);
     }
 
     .about-highlights {
@@ -51,11 +55,11 @@
     }
 
     .about-highlights strong {
-        font-size: 1.15rem;
+        font-size: clamp(1.1rem, 4.5vw, 1.4rem);
     }
 
     .about-highlights span {
-        font-size: 0.65rem;
+        font-size: clamp(0.75rem, 2.5vw, 0.85rem);
     }
 
     .about-values-section {
@@ -67,7 +71,7 @@
     }
 
     .about-kicker {
-        font-size: 0.68rem;
+        font-size: clamp(0.75rem, 2.5vw, 0.85rem);
     }
 
     .about-values-grid {
@@ -85,7 +89,7 @@
     }
 
     .about-value-card p {
-        font-size: 0.82rem;
+        font-size: clamp(0.9rem, 2.8vw, 1rem);
     }
 
     .about-scope-inner {
@@ -98,7 +102,7 @@
 
     .about-scope-tags span {
         padding: 10px 12px;
-        font-size: 0.75rem;
+        font-size: clamp(0.85rem, 2.8vw, 0.95rem);
     }
 
     .about-cta-section {
@@ -124,7 +128,7 @@
     }
 
     .branch-showcase .section-heading h2 {
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 6vw, 2rem);
     }
 
     .branch-showcase .branch-grid {
@@ -141,7 +145,7 @@
 
     .branch-showcase .branch-card {
         min-width: 0;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
     }
 
     .footer-inner {
@@ -164,7 +168,7 @@
     .footer-links a,
     .footer-contact li,
     .footer-bottom p {
-        font-size: 0.8rem;
+        font-size: clamp(0.85rem, 2.8vw, 0.95rem);
     }
 
     .footer-links h4,

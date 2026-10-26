@@ -59,6 +59,9 @@
                     <button class="filter-btn" data-filter="forklift" type="button">Forklift</button>
                     <button class="filter-btn" data-filter="genset" type="button">Genset</button>
                 </div>
+                <div class="filter-scrollbar" aria-hidden="true">
+                    <span></span>
+                </div>
 
                 <div class="brand-grid">
                     <article class="brand-card" data-category="motor">
@@ -233,6 +236,25 @@
         <script>
             const filterButtons = document.querySelectorAll('.filter-btn');
             const cards = document.querySelectorAll('.brand-card');
+            const filterWrap = document.querySelector('.filter-wrap');
+            const filterScrollbar = document.querySelector('.filter-scrollbar');
+            const filterScrollbarThumb = filterScrollbar.querySelector('span');
+
+            function updateFilterScrollbar() {
+                const maxScroll = filterWrap.scrollWidth - filterWrap.clientWidth;
+                const thumbWidth = Math.max(20, filterWrap.clientWidth / filterWrap.scrollWidth * 100);
+                const thumbLeft = maxScroll > 0
+                    ? filterWrap.scrollLeft / maxScroll * (100 - thumbWidth)
+                    : 0;
+
+                filterScrollbar.hidden = maxScroll <= 0;
+                filterScrollbarThumb.style.width = `${thumbWidth}%`;
+                filterScrollbarThumb.style.left = `${thumbLeft}%`;
+            }
+
+            filterWrap.addEventListener('scroll', updateFilterScrollbar, { passive: true });
+            window.addEventListener('resize', updateFilterScrollbar);
+            updateFilterScrollbar();
 
             cards.forEach(card => {
                 const image = card.querySelector('img');

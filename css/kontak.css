@@ -45,6 +45,10 @@ body {
     font-size: 0.8rem;
 }
 
+.contact-section {
+    margin-top: 3%;
+}
+
 .contact-section,
 .map-section,
 .service-area {
@@ -227,6 +231,7 @@ textarea {
 }
 
 .btn-primary {
+    margin-top: 12px;
     background: #1d4ed8;
     color: #fff;
 }

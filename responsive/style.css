@@ -16,7 +16,7 @@
     }
 
     .hero-intro-inner {
-        margin-top: -45%;
+        margin-top: -35%;
     }
 
     .hero-content h1 {
@@ -118,9 +118,10 @@
         scrollbar-width: thin;
     }
 
-    .product-grid .product-card {
+    .product-grid .product-card,
+    .advantage-grid .advantage-card {
         min-width: 0;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
     }
 
     .branch-showcase .branch-grid,
@@ -139,7 +140,7 @@
     .branch-showcase .branch-card,
     .testimonials .testimonial-card {
         min-width: 0;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
     }
 
     .advantages p {
@@ -164,7 +165,7 @@
 
     .advantage-card {
         min-width: 0;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
         text-align: center;
     }
 
@@ -195,7 +196,7 @@
 
     .service-card {
         min-width: 0;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
     }
 
     .service-card p {
@@ -220,7 +221,7 @@
 
     .process-card {
         min-width: 0;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
         text-align: center;
     }
 
