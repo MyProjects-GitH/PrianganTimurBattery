@@ -15,6 +15,6 @@ contactForm.addEventListener("submit", (event) => {
         `Pesan: ${formData.get("pesan")}`
     ].filter(Boolean).join("\n");
 
-    const whatsappUrl = `https://wa.me/62882002125311?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/6282115399000?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 });
