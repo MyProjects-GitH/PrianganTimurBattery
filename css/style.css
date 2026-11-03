@@ -441,8 +441,9 @@ body {
 
 .branch-name {
     color: #111827;
-    font-size: 1.15rem;
+    font-size: 0.8rem;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .branch-actions {
