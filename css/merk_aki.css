@@ -108,6 +108,10 @@
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
 }
 
+.filter-select-wrap {
+    display: none;
+}
+
 .filter-btn {
     padding: 10px 16px;
     border: 0;

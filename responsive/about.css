@@ -1,0 +1,267 @@
+@media (max-width: 1200px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .story-image-wrap {
+        order: -1;
+    }
+
+    .story-image {
+        width: min(540px, 100%);
+        height: clamp(320px, 42vw, 460px);
+    }
+
+    .about-values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .branch-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .page-main {
+        margin-top: 6%;
+    }
+
+    .story-section {
+        padding: 70px 0;
+    }
+
+    .about-highlights {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .about-values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-scope-tags {
+        gap: 8px;
+    }
+
+    .about-scope-tags span {
+        font-size: 0.75rem;
+    }
+
+    .branch-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .site-footer .footer-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 18px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+        text-align: justify;
+    }
+
+    .site-footer .footer-brand,
+    .site-footer .footer-contact {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 640px) {
+    html {
+        font-size: 15px;
+    }
+
+    .page-main {
+        margin-top: 16%;
+    }
+
+    .page-hero {
+        min-height: 230px;
+    }
+
+    .about-page-hero {
+        padding: 28px 0;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .story-section {
+        padding: 52px 0;
+    }
+
+    .story-content h2 {
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
+    }
+
+    .story-content p {
+        font-size: 0.92rem;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .about-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .about-highlights div {
+        padding: 16px 14px;
+    }
+
+    .about-values-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .about-value-card {
+        min-height: 0;
+        padding: 22px 18px;
+    }
+
+    .about-section-intro {
+        margin-bottom: 28px;
+    }
+
+    .about-scope-section,
+    .about-cta-section {
+        padding: 58px 0;
+    }
+
+    .about-scope-inner {
+        align-items: stretch;
+    }
+
+    .about-scope-tags {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .about-scope-tags span {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-cta-inner {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .about-cta-inner .btn {
+        width: 100%;
+    }
+
+    .branch-showcase {
+        padding: 64px 0 56px;
+    }
+
+    .branch-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .branch-card img {
+        height: 180px;
+    }
+
+    .branch-content {
+        padding: 14px;
+    }
+
+    .branch-name {
+        font-size: 0.78rem;
+    }
+
+    .branch-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .branch-maps,
+    .branch-whatsapp {
+        min-height: 42px;
+    }
+
+    .site-footer .footer-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 16px;
+    }
+
+    .site-footer .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .site-footer .footer-contact {
+        grid-column: 1 / -1;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-contact li,
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+
+    .footer-links li,
+    .footer-contact li {
+        align-items: flex-start;
+        gap: 8px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-contact li {
+        display: grid;
+        grid-template-columns: 18px minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero {
+        min-height: 200px;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+    }
+
+    .eyebrow {
+        margin-bottom: 12px;
+        padding: 7px 12px;
+        font-size: 0.7rem;
+    }
+
+    .story-image {
+        height: 260px;
+    }
+
+    .story-content p {
+        font-size: 0.85rem;
+    }
+
+    .about-highlights strong {
+        font-size: 1.2rem;
+    }
+
+    .about-scope-tags span {
+        width: 100%;
+    }
+
+    .about-section-intro h2,
+    .about-scope-section h2,
+    .about-cta-section h2 {
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+    }
+}

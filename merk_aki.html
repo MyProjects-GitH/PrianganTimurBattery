@@ -58,10 +58,24 @@
                     <button class="filter-btn" data-filter="forklift" type="button">Forklift</button>
                     <button class="filter-btn" data-filter="genset" type="button">Genset</button>
                 </div>
-                <div class="filter-scrollbar" aria-hidden="true">
-                    <span></span>
-                </div>
 
+                <div class="filter-select-wrap" aria-label="Pilih kategori produk">
+                    <button class="filter-select" type="button" aria-expanded="false">
+                        <span class="filter-selected-value">Semua</span>
+                        <span class="filter-arrow" aria-hidden="true"></span>
+                    </button>
+                    <div class="filter-dropdown" hidden>
+                        <button class="filter-option active" type="button" data-filter="all">Semua</button>
+                        <button class="filter-option" type="button" data-filter="mobil">Mobil</button>
+                        <button class="filter-option" type="button" data-filter="mobil-mainan">Mobil Mainan</button>
+                        <button class="filter-option" type="button" data-filter="ups">UPS</button>
+                        <button class="filter-option" type="button" data-filter="sepeda-listrik">Sepeda Listrik</button>
+                        <button class="filter-option" type="button" data-filter="motor-listrik">Motor Listrik</button>
+                        <button class="filter-option" type="button" data-filter="forklift">Forklift</button>
+                        <button class="filter-option" type="button" data-filter="genset">Genset</button>
+                    </div>
+                </div>
+                
                 <div class="brand-grid">
 
                     <article class="brand-card" data-category="mobil">
@@ -129,7 +143,7 @@
 
                     <article class="brand-card" data-category="mobil-mainan">
                         <div class="brand-image">
-                            <img src="img/produk-1.jpg" alt="Aki Mobil Mainan">
+                            <img src="img/Mobil Mainan/img 1.png" alt="Dry Plus+ - 6V 4.5Ah">
                         </div>
                         <div class="brand-caption">
                             <span class="brand-tag">Mobil Mainan</span>
@@ -138,7 +152,7 @@
 
                     <article class="brand-card" data-category="ups">
                         <div class="brand-image">
-                            <img src="img/produk-2.jpg" alt="Aki UPS">
+                            <img src="img/UPS/img 1.jpeg" alt="Aki UPS">
                         </div>
                         <div class="brand-caption">
                             <span class="brand-tag">UPS</span>
@@ -147,7 +161,7 @@
 
                     <article class="brand-card" data-category="sepeda-listrik">
                         <div class="brand-image">
-                            <img src="img/produk-3.jpg" alt="Aki Sepeda Listrik">
+                            <img src="img/Sepeda Listrik/img 1.jpg" alt="TIANNENG - 12V 14Ah">
                         </div>
                         <div class="brand-caption">
                             <span class="brand-tag">Sepeda Listrik</span>
@@ -156,7 +170,7 @@
 
                     <article class="brand-card" data-category="motor-listrik">
                         <div class="brand-image">
-                            <img src="img/produk-4.jpg" alt="Aki Motor Listrik">
+                            <img src="img/Motor Listrik/img 1.png" alt="TIANNENG">
                         </div>
                         <div class="brand-caption">
                             <span class="brand-tag">Motor Listrik</span>
@@ -165,7 +179,7 @@
 
                     <article class="brand-card" data-category="forklift">
                         <div class="brand-image">
-                            <img src="img/produk-5.jpg" alt="Aki Forklift">
+                            <img src="img/Forklift/img 1.jpg" alt="Delkor 80D 26L - 12V 70Ah">
                         </div>
                         <div class="brand-caption">
                             <span class="brand-tag">Forklift</span>
@@ -174,7 +188,7 @@
 
                     <article class="brand-card" data-category="genset">
                         <div class="brand-image">
-                            <img src="img/produk-6.jpg" alt="Aki Genset">
+                            <img src="img/Genset/img 1.jpeg" alt="GS PR N100 - 12V 100Ah">
                         </div>
                         <div class="brand-caption">
                             <span class="brand-tag">Genset</span>
@@ -199,26 +213,40 @@
 
         <script>
             const filterButtons = document.querySelectorAll('.filter-btn');
+            const filterOptions = document.querySelectorAll('.filter-option');
+            const filterSelect = document.querySelector('.filter-select');
+            const filterSelectedValue = document.querySelector('.filter-selected-value');
+            const filterDropdown = document.querySelector('.filter-dropdown');
             const cards = document.querySelectorAll('.brand-card');
-            const filterWrap = document.querySelector('.filter-wrap');
-            const filterScrollbar = document.querySelector('.filter-scrollbar');
-            const filterScrollbarThumb = filterScrollbar.querySelector('span');
 
-            function updateFilterScrollbar() {
-                const maxScroll = filterWrap.scrollWidth - filterWrap.clientWidth;
-                const thumbWidth = Math.max(20, filterWrap.clientWidth / filterWrap.scrollWidth * 100);
-                const thumbLeft = maxScroll > 0
-                    ? filterWrap.scrollLeft / maxScroll * (100 - thumbWidth)
-                    : 0;
+            function applyFilter(filter) {
+                filterButtons.forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.filter === filter);
+                });
 
-                filterScrollbar.hidden = maxScroll <= 0;
-                filterScrollbarThumb.style.width = `${thumbWidth}%`;
-                filterScrollbarThumb.style.left = `${thumbLeft}%`;
+                filterOptions.forEach(option => {
+                    const isActive = option.dataset.filter === filter;
+                    option.classList.toggle('active', isActive);
+                });
+
+                if (filterSelectedValue) {
+                    const selectedText = document.querySelector(`.filter-option[data-filter="${filter}"]`)?.textContent || 'Semua';
+                    filterSelectedValue.textContent = selectedText;
+                }
+
+                if (filterSelect) {
+                    filterSelect.setAttribute('aria-expanded', 'false');
+                }
+
+                if (filterDropdown) {
+                    filterDropdown.hidden = true;
+                }
+
+                cards.forEach(card => {
+                    const matches = filter === 'all' || card.dataset.category === filter;
+                    card.style.display = matches ? '' : 'none';
+                });
             }
-
-            filterWrap.addEventListener('scroll', updateFilterScrollbar, { passive: true });
-            window.addEventListener('resize', updateFilterScrollbar);
-            updateFilterScrollbar();
 
             cards.forEach(card => {
                 const image = card.querySelector('img');
@@ -232,17 +260,32 @@
 
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    const filter = button.dataset.filter;
-
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-
-                    cards.forEach(card => {
-                        const matches = filter === 'all' || card.dataset.category === filter;
-                        card.style.display = matches ? '' : 'none';
-                    });
+                    applyFilter(button.dataset.filter);
                 });
             });
+
+            filterOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    applyFilter(option.dataset.filter);
+                });
+            });
+
+            if (filterSelect && filterDropdown) {
+                filterSelect.addEventListener('click', () => {
+                    const isHidden = filterDropdown.hidden;
+                    filterDropdown.hidden = !isHidden;
+                    filterSelect.setAttribute('aria-expanded', String(isHidden));
+                });
+
+                document.addEventListener('click', (event) => {
+                    if (!filterSelect.contains(event.target) && !filterDropdown.contains(event.target)) {
+                        filterDropdown.hidden = true;
+                        filterSelect.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            applyFilter('all');
         </script>
 
     </main>

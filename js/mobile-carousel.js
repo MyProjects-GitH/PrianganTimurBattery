@@ -83,12 +83,6 @@ function initializeLoopingCarousel(grid, cardSelector) {
 }
 
 [
-    [".product-grid", ".product-card"],
-    [".advantage-grid", ".advantage-card"],
-    [".service-grid", ".service-card"],
-    [".process-grid", ".process-card"],
-    [".branch-showcase .branch-grid", ".branch-card"],
-    [".testimonials .testimonial-grid", ".testimonial-card"],
 ].forEach(([gridSelector, cardSelector]) => {
     const grid = document.querySelector(gridSelector);
 

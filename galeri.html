@@ -266,13 +266,19 @@
                 lightboxImage.src = card.dataset.image;
                 lightboxImage.alt = card.dataset.title;
                 lightboxCaption.textContent = card.dataset.title;
+                document.body.style.overflow = 'hidden';
                 lightbox.showModal();
             });
         });
 
-        document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+        const closeLightbox = () => {
+            lightbox.close();
+            document.body.style.overflow = '';
+        };
+
+        document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
         lightbox.addEventListener('click', (event) => {
-            if (event.target === lightbox) lightbox.close();
+            if (event.target === lightbox) closeLightbox();
         });
     </script>
     <script src="js/nav.js" defer></script>

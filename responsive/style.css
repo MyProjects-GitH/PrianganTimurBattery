@@ -99,7 +99,6 @@
     }
 
     .hero-actions {
-        flex-direction: column;
         gap: 12px;
     }
 
@@ -116,7 +115,10 @@
         font-size: clamp(1.7rem, 7vw, 2.2rem);
     }
 
-    .product-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .service-grid,
     .advantage-grid,
     .process-grid,
@@ -127,6 +129,10 @@
 
     .product-action {
         flex-direction: column;
+    }
+
+    .product-card {
+        border-radius: 10px;
     }
 
     .process,
@@ -177,7 +183,7 @@
     .hero-content p {
         max-width: 80%;
         margin: 0 auto;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         line-height: 1.8;
         color: #4b5563;
         margin-bottom: 28px;
@@ -201,8 +207,16 @@
         font-size: 0.96rem;
     }
 
+    .coverage-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
     .coverage-list span {
-        flex-basis: 100%;
+        flex-basis: auto;
+        width: 100%;
+        text-align: center;
     }
 
     .site-footer .footer-inner {
@@ -211,5 +225,13 @@
 
     .home-cta h2 {
         font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .section-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .products .section-heading p {
+        font-size: 0.8rem;
     }
 }
