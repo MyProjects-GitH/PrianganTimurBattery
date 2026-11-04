@@ -123,6 +123,40 @@
     }
 }
 
+@media (max-width: 768px) {
+    .logo a {
+        font-size: 0.72rem;
+    }
+
+    .menu {
+        gap: 8px 12px;
+    }
+
+    .menu a {
+        min-width: 52px;
+    }
+
+    .menu a span {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .logo {
+        max-width: 62vw;
+    }
+
+    .logo a {
+        font-size: 0.7rem;
+        line-height: 1.2;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 @media (max-width: 640px) {
     html {
         font-size: clamp(15px, calc(14px + 0.25vw), 16px);

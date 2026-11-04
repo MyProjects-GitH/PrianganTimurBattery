@@ -1,293 +1,215 @@
-@media (max-width: 560px) {
-    .container {
-        width: min(100% - 32px, 1100px);
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: clamp(2rem, 3vw, 2.8rem);
     }
 
-    .menu {
-        gap: 8px 12px;
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .menu a.active {
-        padding: 0;
+    .branch-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .faq-inner {
+        gap: 42px;
+    }
+}
+
+@media (max-width: 900px) {
     .hero {
-        min-height: 45vh;
+        min-height: 25vh;
     }
 
     .hero-intro-inner {
-        margin-top: -35%;
+        margin-top: -8%;
+        padding: 32px 0 28px;
+    }
+
+    .hero-content p {
+        max-width: 90%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .service-grid,
+    .advantage-grid,
+    .process-grid,
+    .testimonial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .coverage-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .faq-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .home-cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-footer .footer-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 18px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+        text-align: justify;
+    }
+
+    .site-footer .footer-brand,
+    .site-footer .footer-contact {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: min(92%, 640px);
+    }
+
+    .hero {
+        min-height: 44vh;
+    }
+
+    .hero-intro-inner {
+        margin-top: -8%;
+        padding: 28px 0 24px;
     }
 
     .hero-content h1 {
-        font-size: 1.4rem;
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .hero-content p {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-actions .btn,
+    .product-action .btn {
+        width: 100%;
+    }
+
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
+    }
+
+    .product-grid,
+    .service-grid,
+    .advantage-grid,
+    .process-grid,
+    .testimonial-grid,
+    .branch-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-action {
+        flex-direction: column;
+    }
+
+    .process,
+    .advantages,
+    .testimonials,
+    .faq,
+    .home-cta {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .coverage {
+        padding: 60px 0;
+    }
+
+    .coverage-list {
+        gap: 8px;
+    }
+
+    .coverage-list span {
+        flex: 1 1 calc(50% - 8px);
+        text-align: center;
+    }
+
+    .home-cta-inner {
+        padding: 24px 18px;
+    }
+
+    .site-footer .footer-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 38vh;
+    }
+
+    .hero-intro-inner {
+        margin-top: -25%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
         padding: 0 20px;
     }
 
     .hero-content p {
-        font-size: 0.8rem;
-        padding: 0 30px;
-    }
-
-    .hero-intro-inner {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .hero-actions {
-        width: 80%;
+        max-width: 80%;
         margin: 0 auto;
-        margin-bottom: 40px;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .hero-actions .btn {
-        flex: 1 1 0;
-        min-width: 0;
-        gap: 6px;
-        padding: 12px 8px;
-        font-size: 0.78rem;
-    }
-
-    .product-action {
-        flex-direction: row;
-        gap: 8px;
-    }
-
-    .product-action .btn {
-        flex: 1 1 0;
-        min-width: 0;
-        gap: 6px;
-        padding: 12px 8px;
-        font-size: 0.78rem;
+        font-size: 0.9rem;
+        line-height: 1.8;
+        color: #4b5563;
+        margin-bottom: 28px;
     }
 
     .hero-stats {
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
     }
 
     .hero-stats strong {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .hero-stats span {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
-    .products,
-    .services,
-    .advantages,
-    .process,
-    .testimonials,
-    .faq {
-        padding: 20px 0;
+    .product-card>div:nth-child(2) h3 {
+        font-size: 0.96rem;
     }
 
-    .branch-grid,
-    .testimonial-grid {
+    .coverage-list span {
+        flex-basis: 100%;
+    }
+
+    .site-footer .footer-inner {
         grid-template-columns: 1fr;
     }
 
-    .coverage-inner,
-    .faq-inner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .section-heading h2 {
-        font-size: 1.5rem;
-    }
-
-    .products .section-heading p {
-        font-size: 0.8rem;
-    }
-
-    .product-grid {
-        grid-auto-columns: 82%;
-        grid-auto-flow: column;
-        grid-template-columns: none;
-        gap: 16px;
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
-        padding-bottom: 12px;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: thin;
-    }
-
-    .product-grid .product-card,
-    .advantage-grid .advantage-card {
-        min-width: 0;
-        scroll-snap-align: center;
-    }
-
-    .branch-showcase .branch-grid,
-    .testimonials .testimonial-grid {
-        grid-auto-columns: 82%;
-        grid-auto-flow: column;
-        grid-template-columns: none;
-        gap: 16px;
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
-        padding-bottom: 12px;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: thin;
-    }
-
-    .branch-showcase .branch-card,
-    .testimonials .testimonial-card {
-        min-width: 0;
-        scroll-snap-align: center;
-    }
-
-    .advantages p {
-        font-size: 0.8rem;
-    }
-
-    .advantage-grid {
-        grid-auto-columns: 82%;
-        grid-auto-flow: column;
-        grid-template-columns: none;
-        gap: 16px;
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
-        padding-bottom: 12px;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: thin;
-    }
-
-    .advantages .section-kicker {
-        margin-top: 50px;
-    }
-
-    .advantage-card {
-        min-width: 0;
-        scroll-snap-align: center;
-        text-align: center;
-    }
-
-    .services .section-kicker {
-        margin-top: 50px;
-    }
-
-    .services h2 {
-        font-size: 1.5rem;
-        margin-bottom: -20px;
-    }
-
-    .service-card {
-        text-align: center;
-    }
-
-    .service-grid {
-        grid-auto-columns: 82%;
-        grid-auto-flow: column;
-        grid-template-columns: none;
-        gap: 16px;
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
-        padding-bottom: 12px;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: thin;
-    }
-
-    .service-card {
-        min-width: 0;
-        scroll-snap-align: center;
-    }
-
-    .service-card p {
-        font-size: 0.8rem;
-    }
-
-    .process .section-kicker {
-        margin-top: 50px;
-    }
-
-    .process-grid {
-        grid-auto-columns: 82%;
-        grid-auto-flow: column;
-        grid-template-columns: none;
-        gap: 16px;
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
-        padding-bottom: 12px;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: thin;
-    }
-
-    .process-card {
-        min-width: 0;
-        scroll-snap-align: center;
-        text-align: center;
-    }
-
-    .process-card p {
-        font-size: 0.8rem;
-    }
-
-    .branch-showcase .section-heading {
-        margin-top: 50px;
-    }
-
-    .testimonial-grid p {
-        font-size: 0.8rem;
-    }
-
-    .footer-inner {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        text-align: left;
-    }
-
-    .footer-brand,
-    .footer-contact {
-        grid-column: 1 / -1;
-    }
-
-    .footer-brand {
-        margin: 0;
-        margin-bottom: 20px;
-    }
-
-    .footer-brand p,
-    .footer-links a,
-    .footer-contact li,
-    .footer-bottom p {
-        font-size: 0.8rem;
-    }
-
-    .footer-links li,
-    .footer-contact li {
-        justify-content: flex-start;
-    }
-
-    .coverage {
-        text-align: center;
-    }
-
-    .coverage h2 {
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .coverage-list {
-        justify-content: center;
-    }
-
-    .product-image-wrap {
-        height: 240px;
-    }
-
-    .home-cta-inner {
-        align-items: stretch;
-        flex-direction: column;
-        padding: 28px 22px;
-    }
-
-    .home-cta-inner .btn {
-        width: 100%;
+    .home-cta h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
     }
 }
